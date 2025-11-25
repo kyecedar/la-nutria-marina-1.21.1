@@ -48,6 +48,15 @@ a::after {
     margin: 10vh auto;
     padding-left: var(--side-pad);
     border-left: var(--border-size) solid currentColor;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    font-size: 12px;
 }
 
 
