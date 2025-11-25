@@ -1,0 +1,48 @@
+@import url(./../assets/fonts/SpaceMono.css);
+@import url(./../assets/fonts/NerdFont.css);
+
+:root {
+    font-family: SpaceMono;
+    font-size: 16px;
+
+    /* COLORS */
+    --col-primary: color(display-p3 0.003 0.169 0.634);
+    --col-secondary: color(display-p3 0.962 0.987 0.891);
+    --col-accent: #186fe0;
+
+    --col-background: var(--col-secondary);
+    --col-text: var(--col-primary);
+
+    background-color: var(--col-primary);
+    color: var(--col-secondary);
+}
+
+a {
+    color: var(--col-accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.spacer {
+    min-width: 30px;
+    min-height: 30px;
+}
+
+/* .faded {
+    color: var(--col-tertiary);
+} */
+
+.content {
+    --wpad: 30px;
+
+    width: calc(100vw - (var(--wpad) * 2));
+    max-width: 700px;
+    min-height: 80vh;
+    margin: 10vh auto;
+}
+
+
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
