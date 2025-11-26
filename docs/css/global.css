@@ -2,8 +2,11 @@
 @import url(./../assets/fonts/NerdFont.css);
 
 :root {
+    --font-family: SpaceMono;
+    --font-size: 16px;
+
     font-family: SpaceMono;
-    font-size: 16px;
+    font-size: var(--font-size);
 
     /* COLORS */
     --col-primary: color(display-p3 0.148 0.298 0.698);
@@ -28,9 +31,75 @@ a::after {
     padding-left: 8px;
 }
 
+a[target="_blank"]::after {
+    font-family: NerdFont;
+    content: "";
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+a.file::after {
+    font-family: NerdFont;
+    content: "󱅷";
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    text-decoration: underline;
+    color: var(--col-text);
+    cursor: pointer;
+}
+
+button.copy::after {
+    font-family: NerdFont;
+    content: "󱉫";
+    text-decoration: none;
+    padding-left: 8px;
+}
+
+span.coppied::after {
+    content: "coppied";
+    font-size: 12px;
+    padding-left: 12px;
+    transition-property: opacity;
+    animation-name: coppied;
+    animation-duration: 1s;
+    opacity: 0;
+}
+
+@keyframes coppied {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .spacer {
     min-width: 30px;
     min-height: 30px;
+}
+
+.body .spacer {
+    min-width: var(--font-size);
+    min-height: var(--font-size);
 }
 
 /* .faded {
@@ -51,6 +120,13 @@ a::after {
 
     display: flex;
     flex-direction: column;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+
+    white-space: nowrap;
 }
 
 footer {
