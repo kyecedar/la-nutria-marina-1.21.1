@@ -19,6 +19,10 @@
     color: var(--col-text);
 }
 
+* {
+    font-size: var(--font-size) !important;
+}
+
 a {
     color: currentColor;
     text-decoration: underline;
@@ -62,6 +66,10 @@ button.copy::after {
     content: "󱉫";
     text-decoration: none;
     padding-left: 8px;
+}
+
+button.copy:active {
+    opacity: 0.8;
 }
 
 span.coppied::after {
@@ -132,11 +140,18 @@ span.coppied::after {
 footer {
     width: 100%;
     margin-top: auto;
-    font-size: 12px;
+    --font-size: 12px;
+
+    white-space: nowrap;
 }
 
 
 h1 {
-    font-size: 26px;
+    --font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    --font-size: 20px;
     font-weight: bold;
 }
